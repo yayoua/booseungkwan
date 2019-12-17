@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <meta charset="UTF-8">
+        <title>Boo Seungkwan Offical Website</title>
+    <link rel="shortcut icon" href=""/>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        .wrapper {
+            width: 1200px;
+            height: 1000px;
+            background-color: lightgrey;
+            position: relative;
+            margin: 0 auto;
+            color: white;
+            text-align: center;
+        }
+
+        nav {
+            width: 1200px;
+            height: 100px;
+            color: darkgray;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #section-01 {
+            width: 1200px;
+            height: 830px;
+            background-color: #f06543;
+            margin: 0 auto;
+            font-family: 'Avenir Next', sans-serif;
+            font-size: 16px;
+            padding: 25px;
+        }
+
+        #section-02 {
+            width: 1200px;
+            height: 1150px;
+            background-color: #f28123;
+            margin: 0 auto;
+            font-family: 'Avenir Next', sans-serif;
+            font-size: 16px;
+            padding: 25px;
+        }
+
+        #section-footer {
+            width: 1200px;
+            height: 240px;
+            background-color: #c32f27;
+            color: white;
+            margin: 0 auto;
+            font-family: 'Avenir Next', sans-serif;
+            font-size: 16px;
+            padding: 25px;
+            align-content: space-evenly;
+        }
+
+        p#nav-section-01, p#nav-section-02, p#nav-section-03, p#nav-section-04, p#nav-section-05, p#nav-section-06 {
+            display: inline;
+            font-size: 18px;
+            font-family: 'Avenir Next', sans-serif;
+            font-kerning: auto;
+            font-variant: small-caps;
+            padding: 0 25px;
+            line-height: 100px;
+            letter-spacing: 3px;
+        }
+
+        a:link {
+            padding-top: 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:active {
+            text-decoration: lightgrey;
+            font-weight: bolder;
+
+        }
+
+        .footer {
+            color: white;
+            margin: 0 auto;
+            font-family: 'Avenir Next', sans-serif;
+            font-size: 16px;
+            padding-left: 30px;
+            position: absolute;
+        }
+
+        .row {
+            padding-top: 25px;
+        }
+
+        .social-title {
+            padding-top: 25px;
+        }
+
+        h2 {
+            font-family: 'Avenir Next', sans-serif;
+            letter-spacing: 2px;
+            font-color: white;
+        }
+
+        h3 {
+            font-family: 'Avenir Next', sans-serif;
+            letter-spacing: 2px;
+            font-color: white;
+            font-size: 15px;
+            padding-top: 30px;
+        }
+
+        .footer-button-fb {
+            width: 75px;
+            height: 75px;
+            padding: 15px;
+            position: absolute;
+            left: 600px;
+
+        }
+
+        .footer-button-ig {
+            width: 75px;
+            height: 75px;
+            padding: 15px;
+            position: absolute;
+            left: 700px;
+
+        }
+
+        .footer-button-twitter {
+            width: 75px;
+            height: 75px;
+            padding: 15px;
+            position: absolute;
+            left: 500px;
+        }
+
+        .footer-button-yt {
+            width: 75px;
+            height: 75px;
+            padding: 15px;
+            position: absolute;
+            left: 800px;
+        }
+
+        .footer-button-vlive {
+            width: 75px;
+            height: 75px;
+            padding: 15px;
+            position: absolute;
+            left: 900px;
+        }
+
+        .footer-button-svt {
+            width: 75px;
+            height: 75px;
+            padding: 15px;
+            position: absolute;
+            left: 1000px;
+        }
+
+        .footer-text {
+            padding-top: 120px;
+            padding-left: 545px;
+            position: absolute;
+        }
+
+        .logo-footer {
+            position: relative;
+            float: left;
+            width: 300px;
+            padding-left: 16px;
+        }
+
+        .photos {
+            font-family: 'Avenir Next', sans-serif;
+            letter-spacing: 2px;
+            font-color: white;
+            font-size: 15px;
+            positon: absolute;
+            background-color: #c32f27;
+            margin: auto;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 500px;
+            position: relative;
+            padding-top: 10px;
+            margin: auto;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: relative;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <section id="section-01">
+        <nav>
+            <a href="home.html#section-01"><p id="nav-section-01">HOME</p></a>
+            <a href="home.html#section-02"><p id="nav-section-02">ABOUT</p></a>
+            <a href="home.html#section-03"><p id="nav-section-03">TIMELINE</p></a>
+            <a href="home.html#section-04"><p id="nav-section-04">SOCIAL</p></a>
+            <a href="gallery.html#section-01"><p id="nav-section-05">GALLERY</p></a>
+            <a href="more.html"><p id="nav-section-06">MORE</p></a>
+        </nav>
+        <h2 class="social-title">BOO SEUNGKWAN GALLERY</h2>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="boo1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="boo2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="boo3.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="boo4.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="boo5.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="boo6.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="boo7.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="boo8.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="boo9.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="boo10.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="boo11.gif" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="boo12.gif" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="boo13.gif" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="boo14.gif" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="boo15.gif" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="boo16.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="boo17.gif" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="boo18.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="boo19.gif" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="boo20.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="boo21.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="boo22.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="boo23.jpg" style="width:100%">
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <button class="photos"><a
+                href="https://www.pinterest.com/iampjseo/boo-seungkwan/?invite_code=1b9ac4ac26a742a8b87a1476ae4ac8f4&sender=462674699126702654"
+                target="_blank">CLICK HERE FOR<br>MORE PHOTOS</a></button>
+    </section>
+    <section id="section-02">
+        <div class="row">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/caZroiR3iig" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JGaZCiP-tWA" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+        <div class="row">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/apcP6iaZUCk" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/HeOfaEEdv7w" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+        <div class="row">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0eHTeoJ8ROE" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vEcJ9Up32ag" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+        <h3>
+            <a href="https://www.youtube.com/watch?v=bodNA2b9KI0&list=PL--OYYZiDop1cF5oQN1mxlttibMokSTOr"
+               target="_blank">CLICK HERE FOR MORE</a></h3>
+    </section>
+    <section id="section-footer">
+        <a href="#section-01"><p class="footer">SCROLL BACK TO TOP</p></a>
+        <br>
+        <h2 class="footer-text">CHECK OUT MORE SOCIAL LINKS</h2>
+        <a href="home.html#section-01"><img src="logo-04-04.png" class="logo-footer"></a>
+        <a href="https://www.instagram.com/saythename_17/" target="_blank"> <img src="instagram.png"
+                                                                                 class="footer-button-ig"
+                                                                                 alt="facebook"></a>
+        <a href="https://www.facebook.com/seventeennews/" target="_blank"> <img src="facebook.png"
+                                                                                class="footer-button-fb"> </a>
+        <a href="https://twitter.com/pledis_17" target="_blank"> <img src="twitter.png" class="footer-button-twitter">
+        </a>
+        <a href="https://www.youtube.com/user/pledis17/" target="_blank"> <img src="youtube.png"
+                                                                               class="footer-button-yt"> </a>
+        <a href="https://channels.vlive.tv/f99b3/home/" target="_blank"> <img src="vlive.png"
+                                                                              class="footer-button-vlive"> </a>
+        <a href="http://www.seventeen-17.com/" target="_blank"> <img src="seventeen.png" class="footer-button-svt"> </a>
+    </section>
+    </section>
+</div><!-- End of wrapper -->
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+
+    $(document).ready(function () {
+// Add smooth scrolling to all links
+        $("a").on('click', function (event) {
+
+// Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+// Prevent default anchor click behavior
+                event.preventDefault();
+
+// Store hash
+                var hash = this.hash;
+
+// Using jQuery's animate() method to add smooth page scroll
+// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+// Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+</script>
+</body>
+</html>
